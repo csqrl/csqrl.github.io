@@ -1,22 +1,24 @@
-<html>
-  <head>
-    <title>csqrl</title>
+<!DOCTYPE html>
+<meta charset="utf-8">
+<title>Redirecting to https://cxmeel.github.io</title>
+<meta name="viewport" content="width=device-width, initial-scale=1" />
 
-    <script>
-      const here = new URL(location.href)
-      here.hostname = "cxmeel.github.io"
+<p>Redirecting to <span></span></p>
 
-      location.replace(here.href)
-    </script>
-  </head>
+<style>
+  body {
+    background-color: #1a1a1a;
+    color: #fafafa;
+    font-family: monospace;
+  }
+</style>
 
-  <body>
-    <p><strong>@csqrl</strong> is now <strong><a href="https://github.com/cxmeel" rel="noopener noreferrer">@cxmeel</a></strong>.</p>
-    <p id="redirect-message"></p>
+<script defer>
+  const here = new URL(location.href)
+  here.hostname = "cxmeel.github.io"
 
-    <script defer>
-      const redirMsg = document.querySelector("#redirect-message")
-      redirMsg.textContent = "We'll attempt to get you to the right place now."
-    </script>
-  </body>
-</html>
+  const span = document.querySelector("span")
+  span.textContent = here.href
+
+  location.replace(here.href)
+</script>
