@@ -1,0 +1,20 @@
+<html>
+  <head>
+    <title>csqrl</title>
+  </head>
+
+  <body>
+    <script defer>
+      const here = new URL(location.href)
+      here.hostname = "cxmeel.github.io"
+
+      const redirMsg = document.querySelector("#redirect-message")
+      redirMsg.textContent = "We'll attempt to get you to the right place now."
+      
+      location.replace(here.href)
+    </script>
+
+    <p><strong>@csqrl</strong> is now <strong><a href="https://github.com/cxmeel" rel="noopener noreferrer">@cxmeel</a></strong>.</p>
+    <p id="redirect-message"></p>
+  </body>
+</html>
